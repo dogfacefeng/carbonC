@@ -63,6 +63,7 @@ public class SysUserController extends BaseController
         startPage();
         List<SysUser> list = userService.selectUserList(user);
         return getDataTable(list);
+
     }
 
     @Log(title = "用户管理", businessType = BusinessType.EXPORT)
@@ -113,6 +114,7 @@ public class SysUserController extends BaseController
             ajax.put("postIds", postService.selectPostListByUserId(userId));
             ajax.put("roleIds", sysUser.getRoles().stream().map(SysRole::getRoleId).collect(Collectors.toList()));
         }
+        System.out.println(ajax);
         return ajax;
     }
 

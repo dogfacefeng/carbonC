@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ruoyi.wms.mapper.EquipmentInfoMapper">
+
+    <sql id="equipmentInfo">
+        id,equip_name equipName,equip_code equipCode,
+        equip_type equipType,production_date productionDate,
+        production_number productionNumber,production_name productionName,
+        equip_status equipStatus
+    </sql>
+
+
+
+    <select id="getEquipmentInfos" resultType="EquipmentInfo">
+        select * from equipment_info;
+    </select>
+
+
+    <select id="getAll" resultType="EquipmentInfo">
+        select * from equipment_info;
+    </select>
+</mapper>
